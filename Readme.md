@@ -7,31 +7,10 @@ docker run -d -p 15672:15672 -p 5672:5672 --name some-rabbit rabbitmq:3-manageme
 username: guest
 password: guest
 
-# 3. Creamos Usuarios para los servicios:
 
-> Add a user: user_api
+# 3. Ejecutar los Servicios
 
-username:   user_api
-password:   user_api
-conf pass:  user_api
-
-tags: administrator
-
-permisos: set permission
-
-> Add a user: game_api
-
-username:   game_api
-password:   game_api
-conf pass:  game_api
-
-tags: administrator
-
-permisos: set permission
-
-# 4. Ejecutar los Servicios
-
-abrir 2 terminales en simultaneo: game_api y user_api y colocamos el siguiente comando.
+abrir 2 terminales en simultaneo: game_api, user_api y otro_servicio y colocamos el siguiente comando.
 
 node index.js
 
